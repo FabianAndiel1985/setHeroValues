@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Import Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+	<title></title>
+</head>
+<body>
+
+	<div id="allContent">
+
+		<h1>Create your hero</h1>
+
+
+		Your hero`s name <input type="text" name="name" id="heroName">
+		<br>	
+		Your hero`s power is <span id="powerValue">	0 </span> points 
+		<button type="button" class="btn btn-success" onclick="increaseValue(power)"> + </button>
+		<button type="button" class="btn btn-success" onclick="decreaseValue(power)"> - </button>
+		<br>
+		<br>
+		Your hero`s endurance is <span id="enduranceValue">	0 </span> points 
+		<button type="button" class="btn btn-success" onclick="increaseValue(endurance)"> + </button>
+		<button type="button" class="btn btn-success" onclick="decreaseValue(endurance)"> - </button>
+		<br>
+		<br>
+		Your hero`s lives is <span id="liveValue">	0 </span> points 
+		<button type="button" class="btn btn-success" onclick="increaseValue(live)"> + </button>
+		<button type="button" class="btn btn-success" onclick="decreaseValue(live)"> - </button>	
+		<br>
+		<br>
+	</div>
+
+	<script type="text/javascript">
+			
+			var power = "power";
+			var endurance = "endurance";
+			var live = "live";
+
+			var powerStartValue = 0;
+			var enduranceStartValue = 0;
+			var liveStartValue = 0;
+
+			// function to increase the value when player presses plusaziz kurdi button
+
+		function increaseValue(param) {
+			if (param ==  "power") {
+				powerStartValue = powerStartValue + 5;
+				var increaseAttribute = param +"Value";
+				document.getElementById(increaseAttribute).innerHTML=powerStartValue;
+			}
+
+			else if (param ==  "endurance") {
+				enduranceStartValue = enduranceStartValue + 5;
+				var increaseAttribute = param +"Value";
+				document.getElementById(increaseAttribute).innerHTML=enduranceStartValue;
+				
+			}
+		
+			else if (param ==  "live") {
+				liveStartValue = liveStartValue + 5;
+				var increaseAttribute = param +"Value";
+				document.getElementById(increaseAttribute).innerHTML=liveStartValue;	
+			}
+
+		}
+
+		// function to decrease the values when player presses minus button
+
+		function decreaseValue(param) {
+			if (param ==  "power" && powerStartValue > 0) {
+				powerStartValue = powerStartValue - 5;
+				var increaseAttribute = param +"Value";
+				document.getElementById(increaseAttribute).innerHTML=powerStartValue;
+			}
+
+			else if (param ==  "endurance" && enduranceStartValue > 0) {
+				enduranceStartValue = enduranceStartValue - 5;
+				var increaseAttribute = param +"Value";
+				document.getElementById(increaseAttribute).innerHTML=enduranceStartValue;
+				
+			}
+		
+			else if (param ==  "live" && liveStartValue > 0) {
+				liveStartValue = liveStartValue - 5;
+				var increaseAttribute = param +"Value";
+				document.getElementById(increaseAttribute).innerHTML=liveStartValue;	
+			}
+
+		}
+
+
+
+	</script>
+
+</body>
+</html>
