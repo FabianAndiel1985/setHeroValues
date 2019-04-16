@@ -60,20 +60,32 @@
 				powerStartValue = powerStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=powerStartValue;
+				if(distributePoints>0) {
+						distributePoints = distributePoints-5;
+						document.getElementById("distributePoints").innerHTML = distributePoints;
+					}
 			}
 
 			else if (param ==  "endurance") {
 				enduranceStartValue = enduranceStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=enduranceStartValue;
-				
+				if(distributePoints>0) {
+						distributePoints = distributePoints-5;
+						document.getElementById("distributePoints").innerHTML = distributePoints;
+					}
 			}
 		
 			else if (param ==  "live") {
 				liveStartValue = liveStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=liveStartValue;	
+				if(distributePoints>0) {
+						distributePoints = distributePoints-5;
+						document.getElementById("distributePoints").innerHTML = distributePoints;
+					}
 			}
+
 
 		}
 
@@ -84,19 +96,30 @@
 				powerStartValue = powerStartValue - 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=powerStartValue;
+					if(40>distributePoints) {
+						distributePoints = distributePoints+5;
+						document.getElementById("distributePoints").innerHTML = distributePoints;
+					}
 			}
 
 			else if (param ==  "endurance" && enduranceStartValue > 0) {
 				enduranceStartValue = enduranceStartValue - 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=enduranceStartValue;
-				
+					if(40>distributePoints) {
+						distributePoints = distributePoints+5;
+						document.getElementById("distributePoints").innerHTML = distributePoints;
+					}
 			}
 		
 			else if (param ==  "live" && liveStartValue > 0) {
 				liveStartValue = liveStartValue - 5;
 				var increaseAttribute = param +"Value";
-				document.getElementById(increaseAttribute).innerHTML=liveStartValue;	
+				document.getElementById(increaseAttribute).innerHTML=liveStartValue;
+					if(40>distributePoints) {
+						distributePoints = distributePoints+5;
+						document.getElementById("distributePoints").innerHTML = distributePoints;
+					}
 			}
 
 		}
