@@ -86,7 +86,7 @@
 			// function to increase the value when player presses plusaziz kurdi button
 
 		function increaseValue(param) {
-			if (param ==  "power") {
+			if (param ==  "power" && distributePoints > 0) {
 				powerStartValue = powerStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=powerStartValue;
@@ -96,7 +96,7 @@
 					}
 			}
 
-			else if (param ==  "endurance") {
+			else if (param ==  "endurance" &&  distributePoints > 0) {
 				enduranceStartValue = enduranceStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=enduranceStartValue;
@@ -106,7 +106,7 @@
 					}
 			}
 		
-			else if (param ==  "live") {
+			else if (param ==  "live" && distributePoints>0) {
 				liveStartValue = liveStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=liveStartValue;	
@@ -154,14 +154,14 @@
 
 		}
 
-		
+
 
 		$("#createMainCharacter").click(function(){
- 			if (distributePoints > 0) { 
+ 			if (distributePoints > 0 || document.getElementById("heroName").value === "") { 
  				alert("You still got points to distribute or name to fill out");
  			}
 
- 			else {
+ 			else if(distributePoints == 0 && document.getElementById("heroName").value !== "") {
  				alert("Everything fine");
  				var mainCharacter = new mainCharacterConstr(document.getElementById("heroName").value,powerStartValue, enduranceStartValue, liveStartValue);
  				alert("Name" + mainCharacter.name + "Power " + mainCharacter.power + " Endurance " + mainCharacter.endurance + " Lives " + mainCharacter.lives );
