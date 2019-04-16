@@ -14,9 +14,14 @@
 	<div id="allContent">
 
 		<h1>Create your hero</h1>
-
-
+		<br>
+		<br>
+		<br>
+		<p> Distribiute your points: <span id="distributePoints"> 40 </span> points </p>
+		<br>
+		<br>
 		Your hero`s name <input type="text" name="name" id="heroName">
+		<br>
 		<br>	
 		Your hero`s power is <span id="powerValue">	0 </span> points 
 		<button type="button" class="btn btn-success" onclick="increaseValue(power)"> + </button>
@@ -41,6 +46,9 @@
 			var endurance = "endurance";
 			var live = "live";
 
+			// inital values of the hero
+
+			var distributePoints = 40;
 			var powerStartValue = 0;
 			var enduranceStartValue = 0;
 			var liveStartValue = 0;
