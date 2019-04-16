@@ -5,6 +5,24 @@
 	<!-- Import Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<!-- Import Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<style type="text/css">
+		#allContent {
+			text-align: center;
+		}
+
+		#create {
+			width:50%;
+		}
+
+		button {
+			display:inline;
+		}
+
+	</style>
+
 
 
 	<title></title>
@@ -38,6 +56,9 @@
 		<button type="button" class="btn btn-success" onclick="decreaseValue(live)"> - </button>	
 		<br>
 		<br>
+		<br>
+		<button type="button" class="btn btn-primary btn-lg" id="createMainCharacter">Create your hero</button>
+		
 	</div>
 
 	<script type="text/javascript">
@@ -52,6 +73,14 @@
 			var powerStartValue = 0;
 			var enduranceStartValue = 0;
 			var liveStartValue = 0;
+
+			// Constructor for hero object
+
+			function mainCharacterConstr(power, endurance, lives) {
+  				this.power = power;
+				this.endurance = endurance;
+				this.lives = lives;
+			}
 
 			// function to increase the value when player presses plusaziz kurdi button
 
@@ -124,6 +153,26 @@
 
 		}
 
+		$("#createMainCharacter").click(function(){
+ 			if (distributePoints > 0) { 
+ 				alert("You still got points to distribute");
+ 			}
+
+ 			else {
+ 				alert("Everything fine");
+ 				var mainCharacter = new mainCharacterConstr(powerStartValue, enduranceStartValue, liveStartValue);
+ 				alert("Power " + mainCharacter.power + " Endurance " + mainCharacter.endurance + " Lives " + mainCharacter.lives );
+ 			}
+
+		});
+
+// mainCharacterConstr(power, endurance, lives)
+
+// function mainCharacterConstr(power, endurance, lives) {
+//   				this.power = power;
+// 				this.endurance = endurance;
+// 				this.lives = lives;
+// 			}
 
 
 	</script>
