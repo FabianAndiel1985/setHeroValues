@@ -76,7 +76,8 @@
 
 			// Constructor for hero object
 
-			function mainCharacterConstr(power, endurance, lives) {
+			function mainCharacterConstr(name, power, endurance, lives) {
+				this.name = name;
   				this.power = power;
 				this.endurance = endurance;
 				this.lives = lives;
@@ -153,15 +154,17 @@
 
 		}
 
+		
+
 		$("#createMainCharacter").click(function(){
  			if (distributePoints > 0) { 
- 				alert("You still got points to distribute");
+ 				alert("You still got points to distribute or name to fill out");
  			}
 
  			else {
  				alert("Everything fine");
- 				var mainCharacter = new mainCharacterConstr(powerStartValue, enduranceStartValue, liveStartValue);
- 				alert("Power " + mainCharacter.power + " Endurance " + mainCharacter.endurance + " Lives " + mainCharacter.lives );
+ 				var mainCharacter = new mainCharacterConstr(document.getElementById("heroName").value,powerStartValue, enduranceStartValue, liveStartValue);
+ 				alert("Name" + mainCharacter.name + "Power " + mainCharacter.power + " Endurance " + mainCharacter.endurance + " Lives " + mainCharacter.lives );
  			}
 
 		});
