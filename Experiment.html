@@ -83,6 +83,7 @@
 				this.lives = lives;
 			}
 
+
 			// function to increase the value when player presses plusaziz kurdi button
 
 		function increaseValue(param) {
@@ -140,7 +141,7 @@
 			else if (param ==  "live" && liveStartValue > 0) {
 				liveStartValue = liveStartValue - 5;
 				var increaseAttribute = param +"Value";
-				document.getElementB+Id(increaseAttribute).innerHTML=liveStartValue;
+				document.getElementById(increaseAttribute).innerHTML=liveStartValue;
 					if(40>distributePoints) {
 						distributePoints = distributePoints+5;
 						document.getElementById("distributePoints").innerHTML = distributePoints;
