@@ -198,31 +198,64 @@
 	// Choice between the heroes
 	
 	var heroOfChoice;
+	
+
+	// Choice for hero 1 
 
 	$("#hero1").click(function(event){
  		heroOfChoice = 1;
- 		OldBase = $('#hero1').attr('id');
- 		NewBase = OldBase + "Marked.jpg";
- 		alert(NewBase);
- 		document.getElementById("hero1").src = NewBase;
- 		
+ 		OldBase1 = $('#hero1').attr('id');
+ 		NewBase1 = OldBase1 + "Marked.jpg";
+ 		// alert(NewBase1);
+ 		document.getElementById("hero1").src = NewBase1;
+
+ 		if(NewBase2 == "hero2Marked.jpg") {
+ 			document.getElementById("hero2").src = "hero2.jpg";
+ 		}
+
+ 		if(NewBase3 == "hero3Marked.jpg") {
+ 			document.getElementById("hero3").src = "hero3.jpg";
+ 		}
+
 	});
 
+
+	// Choice for hero 2 
 
 	$("#hero2").click(function(){
  		heroOfChoice = 2;
- 		OldBase = $('#hero2').attr('id');
- 		NewBase = OldBase + "Marked.jpg";
- 		alert(NewBase);
- 		document.getElementById("hero2").src = NewBase;
+ 		OldBase2 = $('#hero2').attr('id');
+ 		NewBase2 = OldBase2 + "Marked.jpg";
+ 		// alert(NewBase2);
+ 		document.getElementById("hero2").src = NewBase2;
+
+ 		if(NewBase1 == "hero1Marked.jpg") {
+ 			document.getElementById("hero1").src = "hero1.jpg";
+ 		}
+
+ 		if(NewBase3 == "hero3Marked.jpg") {
+ 			document.getElementById("hero3").src = "hero3.jpg";
+ 		}
+
 	});
+
+
+	// Choice for hero 3
 
 	$("#hero3").click(function(){
  		heroOfChoice = 3;
- 		OldBase = $('#hero3').attr('id');
- 		NewBase = OldBase + "Marked.jpg";
- 		alert(NewBase);
- 		document.getElementById("hero3").src = NewBase;
+ 		OldBase3 = $('#hero3').attr('id');
+ 		NewBase3 = OldBase3 + "Marked.jpg";
+ 		// alert(NewBase3);
+ 		document.getElementById("hero3").src = NewBase3;
+
+ 		if(NewBase1 == "hero1Marked.jpg") {
+ 			document.getElementById("hero1").src = "hero1.jpg";
+ 		}
+
+ 		if(NewBase2 == "hero2Marked.jpg") {
+ 			document.getElementById("hero2").src = "hero2.jpg";
+ 		}
 	});
 
 
