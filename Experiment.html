@@ -73,9 +73,9 @@
 	
 
 	<div class="flex-container">
-		<img src="hero1.jpg">
-		<img src="hero2.jpg">
-		<img src="hero3.jpg">
+		<img src="hero1.jpg" id="hero1">
+		<img src="hero2.jpg" id="hero2">
+		<img src="hero3.jpg" id="hero3">
 
 	</div>
 
@@ -195,7 +195,36 @@
 // 			}
 
 
+	// Choice between the heroes
+	
+	var heroOfChoice;
+
+	$("#hero1").click(function(event){
+ 		heroOfChoice = 1;
+ 		base = $('#hero1').attr('id');
+ 		alert("Test 1 " + heroOfChoice + base);
+	});
+
+
+	$("#hero2").click(function(){
+ 		heroOfChoice = 2;
+ 		base = $('#hero2').attr('id');
+ 		alert("Test 2 " + heroOfChoice + base);
+	});
+
+	$("#hero3").click(function(){
+ 		heroOfChoice = 3;
+ 		base = $('#hero3').attr('id');
+ 		alert("Test 3 " + heroOfChoice + base);
+	});
+
+
+
 	</script>
+
+
+
+
 
 </body>
 </html>
