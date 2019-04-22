@@ -90,30 +90,25 @@
 				powerStartValue = powerStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=powerStartValue;
-				if(distributePoints>0) {
-						distributePoints = distributePoints-5;
-						document.getElementById("distributePoints").innerHTML = distributePoints;
-					}
+				distributePoints = distributePoints-5;
+				document.getElementById("distributePoints").innerHTML = distributePoints;
 			}
 
 			else if (param ==  "endurance" &&  distributePoints > 0) {
 				enduranceStartValue = enduranceStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=enduranceStartValue;
-				if(distributePoints>0) {
-						distributePoints = distributePoints-5;
-						document.getElementById("distributePoints").innerHTML = distributePoints;
-					}
+				distributePoints = distributePoints-5;
+				document.getElementById("distributePoints").innerHTML = distributePoints;
+					
 			}
 		
 			else if (param ==  "live" && distributePoints>0) {
 				liveStartValue = liveStartValue + 5;
 				var increaseAttribute = param +"Value";
 				document.getElementById(increaseAttribute).innerHTML=liveStartValue;	
-				if(distributePoints>0) {
-						distributePoints = distributePoints-5;
-						document.getElementById("distributePoints").innerHTML = distributePoints;
-					}
+				distributePoints = distributePoints-5;
+				document.getElementById("distributePoints").innerHTML = distributePoints;	
 			}
 
 
@@ -145,7 +140,7 @@
 			else if (param ==  "live" && liveStartValue > 0) {
 				liveStartValue = liveStartValue - 5;
 				var increaseAttribute = param +"Value";
-				document.getElementById(increaseAttribute).innerHTML=liveStartValue;
+				document.getElementB+Id(increaseAttribute).innerHTML=liveStartValue;
 					if(40>distributePoints) {
 						distributePoints = distributePoints+5;
 						document.getElementById("distributePoints").innerHTML = distributePoints;
