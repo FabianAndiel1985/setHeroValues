@@ -201,21 +201,27 @@
 
 	$("#hero1").click(function(event){
  		heroOfChoice = 1;
- 		base = $('#hero1').attr('id');
- 		alert("Test 1 " + heroOfChoice + base);
+ 		OldBase = $('#hero1').attr('id');
+ 		NewBase = OldBase + "Marked.jpg";
+ 		alert(NewBase);
+ 		document.getElementById("hero1").src = NewBase;
 	});
 
 
 	$("#hero2").click(function(){
  		heroOfChoice = 2;
- 		base = $('#hero2').attr('id');
- 		alert("Test 2 " + heroOfChoice + base);
+ 		OldBase = $('#hero2').attr('id');
+ 		NewBase = OldBase + "Marked.jpg";
+ 		alert(NewBase);
+ 		document.getElementById("hero2").src = NewBase;
 	});
 
 	$("#hero3").click(function(){
  		heroOfChoice = 3;
- 		base = $('#hero3').attr('id');
- 		alert("Test 3 " + heroOfChoice + base);
+ 		OldBase = $('#hero3').attr('id');
+ 		NewBase = OldBase + "Marked.jpg";
+ 		alert(NewBase);
+ 		document.getElementById("hero3").src = NewBase;
 	});
 
 
